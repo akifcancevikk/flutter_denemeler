@@ -3,14 +3,16 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_denemeler/pages/carousel_slider_page.dart';
 import 'package:flutter_denemeler/pages/country_picker.dart';
 import 'package:flutter_denemeler/pages/date_picker.dart';
-import 'package:flutter_denemeler/pages/dropdown_menu_demo.dart';
-import 'package:flutter_denemeler/pages/filter_menu_page.dart';
+import 'package:flutter_denemeler/pages/expandable_page.dart';
 import 'package:flutter_denemeler/pages/phone_number_formatter.dart';
+import 'package:flutter_denemeler/pages/sliding_up_page.dart';
+import 'package:flutter_denemeler/pages/smoot_page_indicator_page.dart';
+import 'package:flutter_denemeler/pages/sticky_headers_page.dart';
+import 'package:flutter_denemeler/pages/swiper_page.dart';
 import 'package:flutter_denemeler/pages/web_view.dart';
-import 'package:flutter_denemeler/services.dart';
 
 class RoutePage extends StatefulWidget {
   const RoutePage({super.key});
@@ -40,12 +42,16 @@ class _RoutePageState extends State<RoutePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,          
               children: [
-                Button(title: 'Dropdown Search Page', onTap: DropdownDemoPage(),),
-                Button(title: 'Filter Menu Page', onTap: DropdownMenuSample()),
                 Button(title: 'Country Picker Page', onTap: CountryPickerPage()),
                 Button(title: 'Date Picker page', onTap: DatePickerPage()),
                 Button(title: 'Phone number Formatter Page', onTap: PhoneNumberFormatterPage()),  
                 Button(title: 'Web View Page', onTap: WebViewPage()),
+                Button(title: 'Carousel Slider Page', onTap: CarouselSliderPage()),
+                Button(title: 'Photo View Page', onTap: SmootPageIndicatorPage()),
+                Button(title: 'Expandable Page', onTap: ExpandablePage()),
+                Button(title: 'Swiper Page', onTap: SwiperPage()),
+                Button(title: 'Sliding Up Page', onTap: SlidingUpPage()),
+                Button(title: 'Sticky Headers Page', onTap: StickyHeadersPage()),
               ],
             ),
           ),
@@ -69,7 +75,6 @@ class Button extends StatelessWidget {
     return Column(
       children: [
         ElevatedButton(onPressed: () async {
-          await getUserCari();
           Navigator.push(context, CupertinoPageRoute(builder: (context) => onTap,));
         }, child: Text(title, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),)),
         SizedBox(height: 10,)
