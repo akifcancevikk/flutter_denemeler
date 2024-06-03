@@ -3,15 +3,31 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_denemeler/pages/awesome_snackbar_content_page.dart';
+import 'package:flutter_denemeler/pages/buton_tabbar_page.dart';
 import 'package:flutter_denemeler/pages/carousel_slider_page.dart';
 import 'package:flutter_denemeler/pages/country_picker.dart';
 import 'package:flutter_denemeler/pages/date_picker.dart';
 import 'package:flutter_denemeler/pages/expandable_page.dart';
+import 'package:flutter_denemeler/pages/expandable_page_view_page.dart';
+import 'package:flutter_denemeler/pages/expansion_tile_card_page.dart';
+import 'package:flutter_denemeler/pages/flip_card_page.dart';
+import 'package:flutter_denemeler/pages/flutter_expandable_fab_page.dart';
+import 'package:flutter_denemeler/pages/flutter_webview_plugin_page.dart';
+import 'package:flutter_denemeler/pages/infinite_carousel_page.dart';
+import 'package:flutter_denemeler/pages/intro_slider_page.dart';
+import 'package:flutter_denemeler/pages/liquid_pull_to_refresh_page.dart';
+import 'package:flutter_denemeler/pages/multi_dropdown_page.dart';
 import 'package:flutter_denemeler/pages/phone_number_formatter.dart';
+import 'package:flutter_denemeler/pages/flutter_card_swiper_page.dart';
+import 'package:flutter_denemeler/pages/quickalert.dart';
+import 'package:flutter_denemeler/pages/salomon_bottom_bar_page.dart';
+import 'package:flutter_denemeler/pages/shake_page.dart';
 import 'package:flutter_denemeler/pages/sliding_up_page.dart';
 import 'package:flutter_denemeler/pages/smoot_page_indicator_page.dart';
 import 'package:flutter_denemeler/pages/sticky_headers_page.dart';
 import 'package:flutter_denemeler/pages/swiper_page.dart';
+import 'package:flutter_denemeler/pages/text_scroll_page.dart';
 import 'package:flutter_denemeler/pages/web_view.dart';
 
 class RoutePage extends StatefulWidget {
@@ -32,8 +48,8 @@ class _RoutePageState extends State<RoutePage> {
       appBar: AppBar(title: Text('Route Page'), centerTitle: true,),
       body: Center(
         child: Container(
-          width: queryData.size.width*0.7,
-          height: queryData.size.height*0.7,
+          width: queryData.size.width*0.9,
+          height: queryData.size.height*0.9,
           decoration: BoxDecoration(
           color: Colors.blue.shade300,
           borderRadius: BorderRadius.circular(20)    
@@ -52,6 +68,21 @@ class _RoutePageState extends State<RoutePage> {
                 Button(title: 'Swiper Page', onTap: SwiperPage()),
                 Button(title: 'Sliding Up Page', onTap: SlidingUpPage()),
                 Button(title: 'Sticky Headers Page', onTap: StickyHeadersPage()),
+                Button(title: 'Button Tabbar Page', onTap: ButtonTabbarPage()),
+                Button(title: 'Flip Card Page', onTap: FlipCardPage()),
+                Button(title: 'Expandable Page View Page', onTap: ExpandablePageViewPage()),
+                Button(title: 'Awesome Snackbar Content Page', onTap: AwesomeSnackbarContentPage()),
+                Button(title: 'Quick Alert Page', onTap: QuickAlertPage()),
+                Button(title: 'Multi Dropdown Page', onTap: MultiDropdownPage()),
+                Button(title: 'Intro Slider Page', onTap: IntroSliderPage()),
+                Button(title: 'Salomon Bottom Bar Page', onTap: SalomonBottomBarPage()),
+                Button(title: 'Flutter WebView Plugin Page', onTap: FlutterWebViewPluginPage()),
+                Button(title: 'Shake Page', onTap: ShakePage()),
+                Button(title: 'Expansion Tile Card Page', onTap: ExpansionTileCardPage()),
+                Button(title: 'Liquid Pull To Refresh Page', onTap: LiquidPullToRefreshPage()),
+                Button(title: 'Infinite Carousel Page', onTap: InfiniteCarouselPage()),
+                Button(title: 'Text Scroll Page', onTap: TextScrollPage()),
+                Button(title: 'Flutter Expandable Fab Page', onTap: FirstPage()),
               ],
             ),
           ),

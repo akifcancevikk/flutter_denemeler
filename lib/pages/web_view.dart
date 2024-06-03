@@ -1,8 +1,9 @@
-import 'package:flutter/foundation.dart' show kIsWeb;
+// import 'dart:html' as html; // HTML iframe için gerekli
+// import 'dart:ui' as ui; // Platform view için gerekli
+
+// import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'dart:ui' as ui; // Platform view için gerekli
-import 'dart:html' as html; // HTML iframe için gerekli
 
 class WebViewPage extends StatefulWidget {
   const WebViewPage({super.key});
@@ -19,7 +20,7 @@ class _WebViewPageState extends State<WebViewPage> {
         centerTitle: true,
         title: Text('Web View Page'),
       ),
-      body: kIsWeb ? WebViewWeb() : WebViewMobile(),
+      body:  WebViewMobile(), //kIsWeb ? WebViewWeb() :
     );
   }
 }
@@ -52,26 +53,26 @@ class WebViewMobile extends StatelessWidget {
   }
 }
 
-class WebViewWeb extends StatefulWidget {
-  @override
-  _WebViewWebState createState() => _WebViewWebState();
-}
+// class WebViewWeb extends StatefulWidget {
+//   @override
+//   _WebViewWebState createState() => _WebViewWebState();
+// }
 
-class _WebViewWebState extends State<WebViewWeb> {
-  @override
-  void initState() {
-    super.initState();
-    // Register the view factory for the web platform.
-    ui.platformViewRegistry.registerViewFactory(
-      'web-view',
-      (int viewId) => html.IFrameElement()
-        ..src = 'https://advisor.akdemirglobal.com/forgotpassword/'
-        ..style.border = 'none',
-    );
-  }
+// class _WebViewWebState extends State<WebViewWeb> {
+//   @override
+//   void initState() {
+//     super.initState();
+//     // Register the view factory for the web platform.
+//     ui.platformViewRegistry.registerViewFactory(
+//       'web-view',
+//       (int viewId) => html.IFrameElement()
+//         ..src = 'https://advisor.akdemirglobal.com/forgotpassword/'
+//         ..style.border = 'none',
+//     );
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return HtmlElementView(viewType: 'web-view');
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return HtmlElementView(viewType: 'web-view');
+//   }
+// }
