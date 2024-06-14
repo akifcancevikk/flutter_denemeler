@@ -5,10 +5,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_denemeler/pages/awesome_snackbar_content_page.dart';
 import 'package:flutter_denemeler/pages/buton_tabbar_page.dart';
+import 'package:flutter_denemeler/pages/card_loading.dart';
 import 'package:flutter_denemeler/pages/carousel_slider_page.dart';
 import 'package:flutter_denemeler/pages/cart_demo_page.dart';
 import 'package:flutter_denemeler/pages/country_picker.dart';
 import 'package:flutter_denemeler/pages/date_picker.dart';
+import 'package:flutter_denemeler/pages/draggable_home.dart';
 import 'package:flutter_denemeler/pages/expandable_page.dart';
 import 'package:flutter_denemeler/pages/expandable_page_view_page.dart';
 import 'package:flutter_denemeler/pages/expansion_tile_card_page.dart';
@@ -92,6 +94,8 @@ class _RoutePageState extends State<RoutePage> {
                 Button(title: 'Flutter Fortune Wheel Page', onTap: FlutterFortuneWheelPage()),
                 Button(title: 'Flutter Slider Drawer Page', onTap: FlutterSliderDrawerPage()),
                 Button(title: 'Glassmorphism Page', onTap: GlassmorphismPage()),
+                Button(title: 'Draggable Home Page', onTap: DraggableHomePage()),
+                Button(title: 'Card Loading Page', onTap: CardLoadingPage()),
                // Button(title: 'Reorderable Grid View Page', onTap: ReorderableGridViewPage()),
               ],
             ),

@@ -1,9 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:expandable_page_view/expandable_page_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_denemeler/pages/sticky_headers_page.dart';
 
 class ExpandablePageViewPage extends StatefulWidget {
   const ExpandablePageViewPage({super.key});
