@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shake/shake.dart';
@@ -31,10 +33,11 @@ class _ShakePageState extends State<ShakePage> {
     // To close: detector.stopListening();
     // ShakeDetector.waitForStart() waits for user to call detector.startListening();
   }
-
-  
+ 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  Scaffold(
+      appBar: AppBar(centerTitle: true, title: Text('Shake Page'),)
+    );
   }
 }

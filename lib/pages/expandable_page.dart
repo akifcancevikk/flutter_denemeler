@@ -120,7 +120,6 @@ class Card2 extends StatelessWidget {
             ),
           ));
     }
-
     buildCollapsed1() {
       return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,8 +130,7 @@ class Card2 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Expandable",
-                    
+                    "Genişletilebilir",          
                   ),
                 ],
               ),

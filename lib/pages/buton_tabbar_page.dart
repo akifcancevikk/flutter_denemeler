@@ -44,18 +44,21 @@ class _ButtonTabbarPageState extends State<ButtonTabbarPage> {
                 ],
               ),
               Expanded(
-                child: TabBarView(
-                  children: <Widget>[
-                    Center(
-                      child: Icon(Icons.directions_car),
-                    ),
-                    Center(
-                      child: Icon(Icons.directions_transit),
-                    ),
-                    Center(
-                      child: Icon(Icons.directions_bike),
-                    ),
-                  ],
+                child: Container(
+                  color: Colors.blueGrey,
+                  child: TabBarView(               
+                    children: <Widget>[
+                      Center(
+                        child: Icon(Icons.directions_car),
+                      ),
+                      Center(
+                        child: Icon(Icons.directions_transit),
+                      ),
+                      Center(
+                        child: Icon(Icons.directions_bike),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

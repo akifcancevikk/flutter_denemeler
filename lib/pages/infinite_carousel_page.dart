@@ -94,6 +94,8 @@ class _InfiniteCarouselPageState extends State<InfiniteCarouselPage> {
                 },
               ),
             ),
+            Container(color: Colors.amber, height: 100, width: double.infinity,)
+          
           ],
         ),
       ),

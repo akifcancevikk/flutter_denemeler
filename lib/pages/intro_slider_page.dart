@@ -58,6 +58,7 @@ class _IntroSliderPageState extends State<IntroSliderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(centerTitle: true, title: Text('Intro Slider Page'),),
       body: Center(
         child: IntroSlider(

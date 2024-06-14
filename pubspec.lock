@@ -113,6 +113,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.1"
+  chart_sparkline:
+    dependency: "direct main"
+    description:
+      name: chart_sparkline
+      sha256: "3d6c7091851a0483230e51776f51c8bf692da144928150ba254a1b578e098830"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.15+1"
   clock:
     dependency: transitive
     description:
@@ -270,6 +278,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  flutter_fortune_wheel:
+    dependency: "direct main"
+    description:
+      name: flutter_fortune_wheel
+      sha256: "2d8515483762f6f03766f655d88e1fb20bca947b9c8722dfd91c51aca2468596"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.1"
+  flutter_hooks:
+    dependency: transitive
+    description:
+      name: flutter_hooks
+      sha256: "6a126f703b89499818d73305e4ce1e3de33b4ae1c5512e3b8eab4b986f46774c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.18.6"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -294,14 +318,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.4.0"
-  flutter_plugin_android_lifecycle:
-    dependency: transitive
+  flutter_slider_drawer:
+    dependency: "direct main"
     description:
-      name: flutter_plugin_android_lifecycle
-      sha256: "8cf40eebf5dec866a6d1956ad7b4f7016e6c0cc69847ab946833b7d43743809f"
+      name: flutter_slider_drawer
+      sha256: "7e34f47a6d37c7518791fa1e242492df23e75ccbc600eeda4abfd5641aeea709"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.19"
+    version: "2.1.3"
   flutter_svg:
     dependency: transitive
     description:
@@ -328,54 +352,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.4.0"
-  google_maps:
-    dependency: transitive
-    description:
-      name: google_maps
-      sha256: "47eef3836b49bb030d5cb3afc60b8451408bf34cf753e571b645d6529eb4251a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.1.0"
-  google_maps_flutter:
+  glassmorphism:
     dependency: "direct main"
     description:
-      name: google_maps_flutter
-      sha256: c1972cbad779bc5346c49045f26ae45550a0958b1cbca5b524dd3c8954995d28
+      name: glassmorphism
+      sha256: c0f65ea2681d4ee6d4125b947946d983335cd44765e835cdc039894b076a6e31
       url: "https://pub.dev"
     source: hosted
-    version: "2.6.1"
-  google_maps_flutter_android:
-    dependency: transitive
-    description:
-      name: google_maps_flutter_android
-      sha256: "0bcadb80eba39afda77dede89a6caafd3b68f2786b90491eceea4a01c3db181c"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.8.0"
-  google_maps_flutter_ios:
-    dependency: transitive
-    description:
-      name: google_maps_flutter_ios
-      sha256: "244b3abc7cb611c4a5a2c5ce5a5f36a0d11bf5ccc3f05535d9baf61115ba9a5a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.6.1"
-  google_maps_flutter_platform_interface:
-    dependency: transitive
-    description:
-      name: google_maps_flutter_platform_interface
-      sha256: "2bf21aa97edba4461282af5de693b354e589d09f695f7a6f80437d084a29687e"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.7.1"
-  google_maps_flutter_web:
-    dependency: transitive
-    description:
-      name: google_maps_flutter_web
-      sha256: "0c0d5c723d94b295cf86dd1c45ff91d2ac1fff7c05ddca4f01bef9fa0a014690"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.5.7"
+    version: "3.0.0"
   html:
     dependency: "direct main"
     description:
@@ -432,22 +416,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.2.1"
-  js:
-    dependency: transitive
-    description:
-      name: js
-      sha256: f2c445dce49627136094980615a031419f7f3eb393237e4ecd97ac15dea343f3
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.6.7"
-  js_wrapping:
-    dependency: transitive
-    description:
-      name: js_wrapping
-      sha256: e385980f7c76a8c1c9a560dfb623b890975841542471eade630b2871d243851c
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.7.4"
   latlong2:
     dependency: transitive
     description:
@@ -704,6 +672,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  quiver:
+    dependency: transitive
+    description:
+      name: quiver
+      sha256: b1c1ac5ce6688d77f65f3375a9abb9319b3cb32486bdc7a1e0fdf004d7ba4e47
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.1"
+  reorderable_grid_view:
+    dependency: "direct main"
+    description:
+      name: reorderable_grid_view
+      sha256: e36c6229a97105a10c79e15ab4b9b14ee9f6c488574ff2be9e858c82af47cda6
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.8"
+  responsive_grid:
+    dependency: "direct main"
+    description:
+      name: responsive_grid
+      sha256: "852b4d46ae4a530e0d54a1dc59964f3d2cd8d6ca1f6fc4e5790cc0580e367e24"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.4"
   rxdart:
     dependency: transitive
     description:
@@ -720,14 +712,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.2"
-  sanitize_html:
-    dependency: transitive
-    description:
-      name: sanitize_html
-      sha256: "12669c4a913688a26555323fb9cec373d8f9fbe091f2d01c40c723b33caa8989"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.0"
   sensors_plus:
     dependency: transitive
     description:
@@ -760,6 +744,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.0"
+  sidebarx:
+    dependency: "direct main"
+    description:
+      name: sidebarx
+      sha256: abe39d6db237fb8e25c600e8039ffab80fa7fe71acab03e9c378c31f912d2766
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.17.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -781,6 +773,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  snapping_sheet:
+    dependency: "direct main"
+    description:
+      name: snapping_sheet
+      sha256: "17c6367bca51858a903ea2dc66db1d82a61d417e1faf78b0374aae181abb0d79"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
   source_span:
     dependency: transitive
     description:
@@ -837,14 +837,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
-  stream_transform:
-    dependency: transitive
-    description:
-      name: stream_transform
-      sha256: "14a00e794c7c11aa145a170587321aedce29769c08d7f58b1d141da75e3b1c6f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.0"
   string_scanner:
     dependency: transitive
     description:
@@ -1031,4 +1023,4 @@ packages:
     version: "3.1.2"
 sdks:
   dart: ">=3.3.3 <4.0.0"
-  flutter: ">=3.19.0"
+  flutter: ">=3.16.6"

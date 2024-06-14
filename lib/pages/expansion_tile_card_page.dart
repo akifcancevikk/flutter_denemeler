@@ -48,12 +48,12 @@ class _ExpansionTileCardPageState extends State<ExpansionTileCardPage> {
                   ),
                 ),
                 TextField(
-            keyboardType: TextInputType.phone,
-            decoration: InputDecoration(
-              labelText: 'Phone Number',
-              hintText: '(xxx) xxx xx xx',
-            ),
-          ),
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(
+                  labelText: 'Phone Number',
+                  hintText: '(xxx) xxx xx xx',
+                  ),
+                ),
               ],
             ),
           ),
