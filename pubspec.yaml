@@ -82,12 +82,8 @@ dependencies:
   draggable_home: ^1.0.5
   flutter_side_menu: ^0.4.0
   card_loading: ^0.3.2
+  awesome_top_snackbar: ^0.0.3
   
-
-
-
-
-
 
 flutter_native_splash:
   android: true

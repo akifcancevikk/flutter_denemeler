@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable, prefer_typing_uninitialized_variables
 // ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'package:flutter/cupertino.dart';
@@ -11,6 +11,7 @@ import 'package:flutter_denemeler/pages/cart_demo_page.dart';
 import 'package:flutter_denemeler/pages/country_picker.dart';
 import 'package:flutter_denemeler/pages/date_picker.dart';
 import 'package:flutter_denemeler/pages/draggable_home.dart';
+import 'package:flutter_denemeler/pages/draggable_page_deneme.dart';
 import 'package:flutter_denemeler/pages/expandable_page.dart';
 import 'package:flutter_denemeler/pages/expandable_page_view_page.dart';
 import 'package:flutter_denemeler/pages/expansion_tile_card_page.dart';
@@ -29,6 +30,7 @@ import 'package:flutter_denemeler/pages/quickalert.dart';
 import 'package:flutter_denemeler/pages/responsive_grid.dart';
 import 'package:flutter_denemeler/pages/salomon_bottom_bar_page.dart';
 import 'package:flutter_denemeler/pages/shake_page.dart';
+import 'package:flutter_denemeler/pages/shomodal_bottom_sheet_message.dart';
 import 'package:flutter_denemeler/pages/sliding_up_page.dart';
 import 'package:flutter_denemeler/pages/smoot_page_indicator_page.dart';
 import 'package:flutter_denemeler/pages/sticky_headers_page.dart';
@@ -96,6 +98,8 @@ class _RoutePageState extends State<RoutePage> {
                 Button(title: 'Glassmorphism Page', onTap: GlassmorphismPage()),
                 Button(title: 'Draggable Home Page', onTap: DraggableHomePage()),
                 Button(title: 'Card Loading Page', onTap: CardLoadingPage()),
+                Button(title: 'Draggable Page Demo', onTap: DraggablePageDemo()),
+                Button(title: 'Show Modal Bottom Sheet Message Page', onTap: ShowModalBottomSheetMessagePage()),
                // Button(title: 'Reorderable Grid View Page', onTap: ReorderableGridViewPage()),
               ],
             ),
@@ -110,10 +114,10 @@ class Button extends StatelessWidget {
   String title;
   var onTap;
   Button({
-    Key? key,
+    super.key,
     required this.title,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

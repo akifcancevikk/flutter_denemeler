@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_denemeler/pages/cart_demo_page.dart';
 import 'package:flutter_denemeler/pages/route.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -13,6 +12,8 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

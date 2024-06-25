@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CarouselSliderPage extends StatefulWidget {
@@ -48,7 +47,7 @@ class _CarouselSliderPageState extends State<CarouselSliderPage> {
                   decoration: BoxDecoration(
                     color: Colors.transparent
                   ),
-                  child: Image(image: NetworkImage('$i'), fit: BoxFit.cover,)
+                  child: Image(image: NetworkImage(i), fit: BoxFit.cover,)
                 );
               },
             );

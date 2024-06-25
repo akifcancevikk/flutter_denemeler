@@ -103,8 +103,7 @@ class _SliderView extends StatelessWidget {
               .map((menu) => _SliderMenuItem(
                   title: menu.title,
                   iconData: menu.iconData,
-                  onTap: onItemClick))
-              .toList(),
+                  onTap: onItemClick)),
         ],
       ),
     );

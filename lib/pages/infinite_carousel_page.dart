@@ -1,6 +1,6 @@
-import 'dart:ui';
+// ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
+import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';

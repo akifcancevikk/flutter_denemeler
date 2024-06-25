@@ -26,7 +26,6 @@ class _FlipCardPageState extends State<FlipCardPage> {
         side: CardSide.FRONT,
         speed: 1000,
         onFlipDone: (status) {
-          print(status);
         },
         front: Container(
           decoration: BoxDecoration(
@@ -36,9 +35,9 @@ class _FlipCardPageState extends State<FlipCardPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Front', style: Theme.of(context).textTheme.headline1),
+              Text('Front', style: Theme.of(context).textTheme.displayLarge),
               Text('Click here to flip back',
-                  style: Theme.of(context).textTheme.bodyText1),
+                  style: Theme.of(context).textTheme.bodyLarge),
             ],
           ),
         ),
@@ -50,9 +49,9 @@ class _FlipCardPageState extends State<FlipCardPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Back', style: Theme.of(context).textTheme.headline1),
+              Text('Back', style: Theme.of(context).textTheme.displayLarge),
               Text('Click here to flip front',
-                  style: Theme.of(context).textTheme.bodyText1),
+                  style: Theme.of(context).textTheme.bodyLarge),
             ],
           ),
         ),

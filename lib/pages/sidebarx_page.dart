@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:sidebarx/sidebarx.dart';
 
@@ -61,10 +62,9 @@ class _SidebarPageState extends State<SidebarPage> {
 
 class ExampleSidebarX extends StatelessWidget {
   const ExampleSidebarX({
-    Key? key,
+    super.key,
     required SidebarXController controller,
-  })  : _controller = controller,
-        super(key: key);
+  })  : _controller = controller;
 
   final SidebarXController _controller;
 
@@ -176,9 +176,8 @@ class ExampleSidebarX extends StatelessWidget {
 
 class _ScreensExample extends StatelessWidget {
   const _ScreensExample({
-    Key? key,
     required this.controller,
-  }) : super(key: key);
+  });
 
   final SidebarXController controller;
 

@@ -1,6 +1,6 @@
-import 'dart:math';
+// ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 

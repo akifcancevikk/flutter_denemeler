@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:quickalert/models/quickalert_type.dart';
 import 'package:quickalert/widgets/quickalert_dialog.dart';
@@ -24,6 +25,8 @@ class _QuickAlertPageState extends State<QuickAlertPage> {
                 successMesagge(context);
               }, 
               child: Text('Başarılı Mesajı')),
+
+
             ElevatedButton(
               onPressed: () {
                 errorMesagge(context);
@@ -48,10 +51,21 @@ class _QuickAlertPageState extends State<QuickAlertPage> {
 
 successMesagge(BuildContext context) {
   return QuickAlert.show(
+    showCancelBtn: true,
+    confirmBtnColor: Colors.green,
  context: context,
  type: QuickAlertType.success,
- text: 'Adres Kaydedildi',
- confirmBtnText: 'Tamam',
+ text: 'Ürün Sepete Eklendi',
+ confirmBtnText: 'Sepete Git',
+ onConfirmBtnTap: () {
+   ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Second button clicked!'),
+      ),
+    );
+ },
+ cancelBtnText: 'Tamam',
+ onCancelBtnTap: () => Navigator.pop(context),
  title: 'Başarılı'
 );
 }

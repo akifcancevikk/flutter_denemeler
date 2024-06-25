@@ -1,6 +1,8 @@
 // import 'dart:html' as html; // HTML iframe için gerekli
 // import 'dart:ui' as ui; // Platform view için gerekli
 
+// ignore_for_file: prefer_const_constructors
+
 // import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -26,6 +28,8 @@ class _WebViewPageState extends State<WebViewPage> {
 }
 
 class WebViewMobile extends StatelessWidget {
+  const WebViewMobile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return WebViewWidget(controller: WebViewController()

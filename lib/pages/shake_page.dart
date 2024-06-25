@@ -1,6 +1,4 @@
-// ignore_for_file: unused_local_variable
-
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: unused_local_variable, prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:shake/shake.dart';
 
@@ -13,6 +11,7 @@ class ShakePage extends StatefulWidget {
 
 class _ShakePageState extends State<ShakePage> {
   
+  @override
   void initState() {
     super.initState();
     ShakeDetector detector = ShakeDetector.autoStart(

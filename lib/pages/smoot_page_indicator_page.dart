@@ -1,6 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -23,7 +21,7 @@ class _SmootPageIndicatorPageState extends State<SmootPageIndicatorPage> {
                 color: Colors.grey.shade300,
               ),
               margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-              child: Container(
+              child: SizedBox(
                 height: 280,
                 child: Center(
                     child: Text(
@@ -154,7 +152,7 @@ class _SmootPageIndicatorPageState extends State<SmootPageIndicatorPage> {
   }
 }
 
-final colors = const [
+const colors = [
   Colors.red,
   Colors.green,
   Colors.greenAccent,

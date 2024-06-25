@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:expandable/expandable.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
@@ -160,7 +159,7 @@ class Card2 extends StatelessWidget {
                   ),
                   Text(
                     "3 Expandable widgets",
-                    style: Theme.of(context).textTheme.caption,
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ],
               ),
@@ -239,7 +238,7 @@ class Card2 extends StatelessWidget {
                           controller.expanded ? "DARALT" : "GENİŞLET",
                           style: Theme.of(context)
                               .textTheme
-                              .button!
+                              .labelLarge!
                               .copyWith(color: Colors.deepPurple),
                         ),
                         onPressed: () {
@@ -271,7 +270,7 @@ class Card3 extends StatelessWidget {
     buildList() {
       return Column(
         children: <Widget>[
-          for (var i in [1, 2, 3, 4]) buildItem("Item ${i}"),
+          for (var i in [1, 2, 3, 4]) buildItem("Item $i"),
         ],
       );
     }
@@ -313,7 +312,7 @@ class Card3 extends StatelessWidget {
                             "Items",
                             style: Theme.of(context)
                                 .textTheme
-                                .bodyText1!
+                                .bodyLarge!
                                 .copyWith(color: Colors.white),
                           ),
                         ),

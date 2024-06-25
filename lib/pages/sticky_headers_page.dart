@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_denemeler/images.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
@@ -24,9 +25,9 @@ class _StickyHeadersPageState extends State<StickyHeadersPage> {
 @immutable
 class Example1 extends StatelessWidget {
   const Example1({
-    Key? key,
+    super.key,
     this.controller,
-  }) : super(key: key);
+  });
 
   final ScrollController? controller;
 
@@ -74,9 +75,9 @@ class Example1 extends StatelessWidget {
 @immutable
 class Example2 extends StatelessWidget {
   const Example2({
-    Key? key,
+    super.key,
     this.controller,
-  }) : super(key: key);
+  });
 
   final ScrollController? controller;
 
@@ -144,9 +145,9 @@ class Example2 extends StatelessWidget {
 @immutable
 class Example3 extends StatelessWidget {
   const Example3({
-    Key? key,
+    super.key,
     this.controller,
-  }) : super(key: key);
+  });
 
   final ScrollController? controller;
 
@@ -198,11 +199,11 @@ class Example3 extends StatelessWidget {
 @immutable
 class ScaffoldWrapper extends StatelessWidget {
   const ScaffoldWrapper({
-    Key? key,
+    super.key,
     required this.title,
     required this.child,
     this.wrap = true,
-  }) : super(key: key);
+  });
 
   final Widget child;
   final String title;
@@ -234,7 +235,7 @@ class ScaffoldWrapper extends StatelessWidget {
 
 @immutable
 class Example4 extends StatefulWidget {
-  const Example4({Key? key}) : super(key: key);
+  const Example4({super.key});
 
   @override
   State<Example4> createState() => _Example4State();

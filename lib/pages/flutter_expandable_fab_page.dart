@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_expandable_fab/flutter_expandable_fab.dart';
   final scaffoldKey = GlobalKey<ScaffoldMessengerState>();
@@ -46,7 +47,7 @@ class _FlutterExpandableFabPageState extends State<FlutterExpandableFabPage> {
 
 
 class FirstPage extends StatefulWidget {
-  const FirstPage({Key? key}) : super(key: key);
+  const FirstPage({super.key});
 
   @override
   State<FirstPage> createState() => _FirstPageState();
@@ -145,7 +146,7 @@ class _FirstPageState extends State<FirstPage> {
 }
 
 class NextPage extends StatelessWidget {
-  const NextPage({Key? key}) : super(key: key);
+  const NextPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
@@ -17,7 +16,7 @@ class _GlassmorphismPageState extends State<GlassmorphismPage> {
     return Scaffold(
       backgroundColor: Colors.teal,
       appBar: AppBar(centerTitle: true, title: Text('Glassmorphism Page'),),
-      body: Container(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Stack(
