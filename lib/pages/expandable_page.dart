@@ -12,6 +12,27 @@ class ExpandablePage extends StatefulWidget {
 }
 
 class _ExpandablePageState extends State<ExpandablePage> {
+  ScrollController scrollController = ScrollController();
+  bool showbtn = false;
+    @override
+  void initState() {
+    scrollController.addListener(() { //scroll listener 
+        double showoffset = 10.0; //Back to top botton will show on scroll offset 10.0
+
+        if(scrollController.offset > showoffset){
+              showbtn = true;
+              setState(() {
+                //update state 
+              });
+        }else{
+             showbtn = false;
+              setState(() {
+                //update state 
+              });
+        }
+    });
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +42,10 @@ class _ExpandablePageState extends State<ExpandablePage> {
           iconColor: Colors.blue,
           useInkWell: true,
         ),
-        child: ListView(
+        child: Stack(
+          children: [
+            ListView(
+          controller:  scrollController,
           physics: const BouncingScrollPhysics(),
           children: <Widget>[
             Card1(),
@@ -29,6 +53,26 @@ class _ExpandablePageState extends State<ExpandablePage> {
             Card3(),
           ],
         ),
+        Positioned(
+          right: 10,
+          bottom: 10,
+          child: AnimatedOpacity(
+             duration: Duration(milliseconds: 1000),  //show/hide animation
+             opacity: showbtn?1.0:0.0, //set obacity to 1 on visible, or hide
+             child: IconButton( 
+                onPressed: () {  
+                   scrollController.animateTo( //go to top of scroll
+                     0,  //scroll offset to go
+                     duration: Duration(milliseconds: 500), //duration of scroll
+                     curve:Curves.fastOutSlowIn //scroll type
+                    );
+                },
+                icon: Icon(Icons.arrow_upward),
+             ), 
+           ),
+        ),
+          ],
+        )
       ),
     );
   }

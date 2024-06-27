@@ -20,17 +20,22 @@ import 'package:flutter_denemeler/pages/flutter_expandable_fab_page.dart';
 import 'package:flutter_denemeler/pages/flutter_fortune_wheel.dart';
 import 'package:flutter_denemeler/pages/flutter_slider_drawer.dart';
 import 'package:flutter_denemeler/pages/flutter_webview_plugin_page.dart';
+import 'package:flutter_denemeler/pages/gauge_indicator.dart';
 import 'package:flutter_denemeler/pages/glassmorphism.dart';
 import 'package:flutter_denemeler/pages/infinite_carousel_page.dart';
+import 'package:flutter_denemeler/pages/info_popup.dart';
 import 'package:flutter_denemeler/pages/intro_slider_page.dart';
 import 'package:flutter_denemeler/pages/liquid_pull_to_refresh_page.dart';
 import 'package:flutter_denemeler/pages/multi_dropdown_page.dart';
 import 'package:flutter_denemeler/pages/phone_number_formatter.dart';
 import 'package:flutter_denemeler/pages/quickalert.dart';
 import 'package:flutter_denemeler/pages/responsive_grid.dart';
+import 'package:flutter_denemeler/pages/responsive_grid_list_page.dart';
+import 'package:flutter_denemeler/pages/responsive_test_page.dart';
 import 'package:flutter_denemeler/pages/salomon_bottom_bar_page.dart';
 import 'package:flutter_denemeler/pages/shake_page.dart';
 import 'package:flutter_denemeler/pages/shomodal_bottom_sheet_message.dart';
+import 'package:flutter_denemeler/pages/siri_wave.dart';
 import 'package:flutter_denemeler/pages/sliding_up_page.dart';
 import 'package:flutter_denemeler/pages/smoot_page_indicator_page.dart';
 import 'package:flutter_denemeler/pages/sticky_headers_page.dart';
@@ -100,6 +105,11 @@ class _RoutePageState extends State<RoutePage> {
                 Button(title: 'Card Loading Page', onTap: CardLoadingPage()),
                 Button(title: 'Draggable Page Demo', onTap: DraggablePageDemo()),
                 Button(title: 'Show Modal Bottom Sheet Message Page', onTap: ShowModalBottomSheetMessagePage()),
+                Button(title: 'My Responsive Widget Page', onTap: MyResponsiveWidget()),
+                Button(title: 'Responsive Grid List Page', onTap: ResponsiveGridListPage()),
+                Button(title: 'Gauge Indicator Page', onTap: GaugeIndicatorPage()),
+                Button(title: 'Info Popup Page', onTap: InfoPopupPage()),
+                Button(title: 'Siri Wave Page', onTap: SiriWavePage()),
                // Button(title: 'Reorderable Grid View Page', onTap: ReorderableGridViewPage()),
               ],
             ),

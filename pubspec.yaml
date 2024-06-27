@@ -83,6 +83,10 @@ dependencies:
   flutter_side_menu: ^0.4.0
   card_loading: ^0.3.2
   awesome_top_snackbar: ^0.0.3
+  responsive_grid_list: ^1.4.0
+  gauge_indicator: ^0.4.3
+  info_popup: ^4.3.1
+  siri_wave: ^2.0.0+1
   
 
 flutter_native_splash:

@@ -31,7 +31,7 @@ class _ShowModalBottomSheetMessagePageState extends State<ShowModalBottomSheetMe
               builder: (BuildContext context) {
                 return Builder(
                   builder: (BuildContext newContext) {
-                    return Container(
+                    return SizedBox(
                       width: double.infinity,
                       height: 500,
                       child: ElevatedButton(

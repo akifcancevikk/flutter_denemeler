@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:draggable_home/draggable_home.dart';
-import 'package:expandable/expandable.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DraggableHomePage extends StatefulWidget {
@@ -27,7 +25,7 @@ class _DraggableHomePageState extends State<DraggableHomePage> {
       headerWidget: headerWidget(context),
     //  headerBottomBar: headerBottomBarWidget(),
       body: [
-        SizedBox(height: double.maxFinite, width: double.infinity,child: gridviewCountOrnegi()),
+        listView()
       ],
       fullyStretchable: true,
       backgroundColor: Colors.white,
@@ -82,95 +80,23 @@ Row headerBottomBarWidget() {
     );
   }
 
-GridView gridviewCountOrnegi() {
-    return GridView.count(
-      // reverse: en son elemanı en başa yazmayı sağlar
-      // scroll yönünü ayarlar
-      scrollDirection: Axis.vertical,
-      // crossAxisCount: soldan sağa kaç tane eleman konulacağını belirtiyoruz.
-      crossAxisCount: 2,
-      // crossAxisSpacing: soldan sağa doğru sütunların arasındaki boşluk miktarı
-      crossAxisSpacing: 5,
-      // mainAxisSpacing: yukarıdan aşağı sütunlar arasındaki boşluk miktarı
-      mainAxisSpacing: 5,
-      // her bir elemanın çevresine verilen boşluk miktarı
-      padding: const EdgeInsets.all(10),
-      children: [
-        Container(
+GridView gridviewBuilderOrnegi() {
+    return GridView.builder(
+      shrinkWrap: true,
+      primary: true,
+      
+      // eleman sayısı
+      itemCount: 100,
+      // elemanlara her yerden 5 oranında boşluk ver
+      padding: const EdgeInsets.all(5),
+      // yan yana eleman sayısı
+      gridDelegate:
+          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+      itemBuilder: (BuildContext context, int index) {
+        return Container(
           alignment: Alignment.center,
-          color: Colors.blue,
+          color: Colors.teal[100 * ((index + 1) % 8)],
           child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-        Container(
-          alignment: Alignment.center,
-          color: Colors.blue,
-          child: const Text("GridView Örneği"),
-        ),
-      ],
-    );
+        );
+      });
   }
