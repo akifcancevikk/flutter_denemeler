@@ -22,6 +22,7 @@ class _ShowModalBottomSheetMessagePageState extends State<ShowModalBottomSheetMe
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(centerTitle: true, title: Text('ShowModal Bottom Sheet Message Page'),),
       body: Center(
         child: ElevatedButton(
           onPressed: () {

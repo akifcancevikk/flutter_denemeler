@@ -20,11 +20,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: Locale('tr', 'TR'),
       title: 'Flutter Demo',
-       theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
       home: RoutePage(),
     );
   }

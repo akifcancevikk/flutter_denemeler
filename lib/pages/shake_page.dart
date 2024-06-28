@@ -18,7 +18,7 @@ class _ShakePageState extends State<ShakePage> {
       onPhoneShake: () {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Shake!'),
+            content: Text('Cihaz Sallandı!'),
           ),
         );
         // Do stuff on phone shake
@@ -36,7 +36,8 @@ class _ShakePageState extends State<ShakePage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(centerTitle: true, title: Text('Shake Page'),)
+      appBar: AppBar(centerTitle: true, title: Text('Shake Page'),),
+      body: Center(child: Text('Mesaj için cihazınızı sallayın!!!'),),
     );
   }
 }

@@ -30,12 +30,12 @@ class _GaugeIndicatorPageState extends State<GaugeIndicatorPage> {
             axis: GaugeAxis(
               min: 0,
               max: 100,
-              degrees: 360,
+              degrees: 340,
               style: const GaugeAxisStyle(
-          thickness: 20,
-          background: Color(0xFFDFE2EC),
-          segmentSpacing: 4,
-              ),
+                thickness: 20,
+                background: Color(0xFFDFE2EC),
+                segmentSpacing: 4,
+                    ),
           
               /// Define the pointer that will indicate the progress (optional).
               pointer: GaugePointer.circle(
@@ -51,29 +51,9 @@ class _GaugeIndicatorPageState extends State<GaugeIndicatorPage> {
               ?Colors.blueGrey
               : Colors.pink,
               ),
-          //     segments: [
-          // const GaugeSegment(
-          //   from: 0,
-          //   to: 33.3,
-          //   color: Colors.amber,
-          //   cornerRadius: Radius.zero,
-          // ),
-          // const GaugeSegment(
-          //   from: 33.3,
-          //   to: 66.6,
-          //   color: Colors.green,
-          //   cornerRadius: Radius.zero,
-          // ),
-          // const GaugeSegment(
-          //   from: 66.6,
-          //   to: 100,
-          //   color: Colors.blue,
-          //   cornerRadius: Radius.zero,
-          // ),
-          //     ],
-              
+
             ),
-              ),
+          ),
               SizedBox(height: 100,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),

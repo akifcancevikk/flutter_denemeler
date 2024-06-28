@@ -23,6 +23,7 @@ class _FlutterFortuneWheelPageState extends State<FlutterFortuneWheelPage> {
           backgroundColor: Colors.lightBlueAccent,
         ),
         body: FortuneWheel(
+          rotationCount: 1,
         selected: controller.stream,
         items: [
           FortuneItem(child: Text('Han Solo')),
