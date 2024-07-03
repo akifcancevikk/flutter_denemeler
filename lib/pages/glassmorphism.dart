@@ -32,11 +32,11 @@ class _GlassmorphismPageState extends State<GlassmorphismPage> {
               child: Center(
                 child: GlassmorphicContainer(
                     width: 350,
-                    height: 750,
+                    height: 600,
                     borderRadius: 20,
-                    blur: 50,
+                    blur: 7,
                     alignment: Alignment.bottomCenter,
-                    border: 2,
+                    border: 1,
                     linearGradient: LinearGradient(
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
@@ -56,7 +56,9 @@ class _GlassmorphismPageState extends State<GlassmorphismPage> {
                         Color((0xFFFFFFFF)).withOpacity(0.5),
                       ],
                     ),
-                    child: Text('WOW!', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),)),
+                    child: Center(child: Text('WOW!', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30),))
+                    
+                    ),
               ),
             ),
           ],

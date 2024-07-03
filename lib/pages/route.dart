@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable, prefer_typing_uninitialized_variables
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables
 // ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'package:flutter/cupertino.dart';
@@ -10,7 +10,9 @@ import 'package:flutter_denemeler/pages/carousel_slider_page.dart';
 import 'package:flutter_denemeler/pages/cart_demo_page.dart';
 import 'package:flutter_denemeler/pages/country_picker.dart';
 import 'package:flutter_denemeler/pages/date_picker.dart';
+import 'package:flutter_denemeler/pages/design_test_page.dart';
 import 'package:flutter_denemeler/pages/draggable_home.dart';
+import 'package:flutter_denemeler/pages/draggable_home_demo_page.dart';
 import 'package:flutter_denemeler/pages/draggable_page_deneme.dart';
 import 'package:flutter_denemeler/pages/expandable_page.dart';
 import 'package:flutter_denemeler/pages/expandable_page_view_page.dart';
@@ -48,6 +50,8 @@ import 'package:flutter_denemeler/pages/swiper_page.dart';
 import 'package:flutter_denemeler/pages/syncfusion_flutter_sliders.dart';
 import 'package:flutter_denemeler/pages/text_scroll_page.dart';
 import 'package:flutter_denemeler/pages/visual_effect.dart';
+import 'package:flutter_denemeler/pages/web_page_demo_page.dart';
+import 'package:glassmorphism/glassmorphism.dart';
 
 class RoutePage extends StatefulWidget {
   const RoutePage({super.key});
@@ -62,71 +66,107 @@ class _RoutePageState extends State<RoutePage> {
   Widget build(BuildContext context) {
    MediaQueryData queryData;
     queryData = MediaQuery.of(context);
-    return Scaffold(
-      backgroundColor: Colors.blue.shade200,
-      appBar: AppBar(title: Text('Route Page'), centerTitle: true,),
-      body: Center(
-        child: Container(
-          width: queryData.size.width*0.9,
-          height: queryData.size.height*0.9,
-          decoration: BoxDecoration(
-          color: Colors.blue.shade300,
-          borderRadius: BorderRadius.circular(20)    
+    return Stack(
+      children: [
+        Image.network(
+            "https://images.pexels.com/photos/8273387/pexels-photo-8273387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            fit: BoxFit.cover,
           ),
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,          
-              children: [
-                Button(title: 'Country Picker Page', onTap: CountryPickerPage()),
-                Button(title: 'Date Picker page', onTap: DatePickerPage()),
-                Button(title: 'Phone number Formatter Page', onTap: PhoneNumberFormatterPage()),  
-                Button(title: 'Carousel Slider Page', onTap: CarouselSliderPage()),
-                Button(title: 'Photo View Page', onTap: SmootPageIndicatorPage()),
-                Button(title: 'Expandable Page', onTap: ExpandablePage()),
-                Button(title: 'Swiper Page', onTap: SwiperPage()),
-                Button(title: 'Sliding Up Page', onTap: SlidingUpPage()),
-                Button(title: 'Sticky Headers Page', onTap: StickyHeadersPage()),
-                Button(title: 'Button Tabbar Page', onTap: ButtonTabbarPage()),
-                Button(title: 'Flip Card Page', onTap: FlipCardPage()),
-                Button(title: 'Expandable Page View Page', onTap: ExpandablePageViewPage()),
-                Button(title: 'Awesome Snackbar Content Page', onTap: AwesomeSnackbarContentPage()),
-                Button(title: 'Quick Alert Page', onTap: QuickAlertPage()),
-                Button(title: 'Multi Dropdown Page', onTap: MultiDropdownPage()),
-                Button(title: 'Intro Slider Page', onTap: IntroSliderPage()),
-                Button(title: 'Salomon Bottom Bar Page', onTap: SalomonBottomBarPage()),
-                Button(title: 'Flutter WebView Plugin Page', onTap: FlutterWebViewPluginPage()),
-                Button(title: 'Shake Page', onTap: ShakePage()),
-                Button(title: 'Expansion Tile Card Page', onTap: ExpansionTileCardPage()),
-                Button(title: 'Liquid Pull To Refresh Page', onTap: LiquidPullToRefreshPage()),
-                Button(title: 'Infinite Carousel Page', onTap: InfiniteCarouselPage()),
-                Button(title: 'Text Scroll Page', onTap: TextScrollPage()),
-                Button(title: 'Flutter Expandable Fab Page', onTap: FirstPage()),
-                Button(title: 'Cart Demo Page', onTap: CartDemoPage()),
-                Button(title: 'Responsive Grid Page', onTap: ResponsiveGridPage()),
-                Button(title: 'Flutter Fortune Wheel Page', onTap: FlutterFortuneWheelPage()),
-                Button(title: 'Flutter Slider Drawer Page', onTap: FlutterSliderDrawerPage()),
-                Button(title: 'Glassmorphism Page', onTap: GlassmorphismPage()),
-                Button(title: 'Draggable Home Page', onTap: DraggableHomePage()),
-                Button(title: 'Card Loading Page', onTap: CardLoadingPage()),
-                Button(title: 'Draggable Page Demo', onTap: DraggablePageDemo()),
-                Button(title: 'Show Modal Bottom Sheet Message Page', onTap: ShowModalBottomSheetMessagePage()),
-                Button(title: 'My Responsive Widget Page', onTap: MyResponsiveWidget()),
-                Button(title: 'Responsive Grid List Page', onTap: ResponsiveGridListPage()),
-                Button(title: 'Gauge Indicator Page', onTap: GaugeIndicatorPage()),
-                Button(title: 'Info Popup Page', onTap: InfoPopupPage()),
-                Button(title: 'Siri Wave Page', onTap: SiriWavePage()),
-                Button(title: 'Flutter Tilt Page', onTap: FlutterTiltPage()),
-                Button(title: 'Pie Menu Page', onTap: PieMenuPage()),
-                Button(title: 'Syncfusion Flutter Sliders Page', onTap: SyncfusionFlutterSlidersPage()),
-                Button(title: 'Mesh Gradient Page', onTap: MeshGradientPage()),
-                Button(title: 'Metronome Page', onTap: MetronomePage()),
-                Button(title: 'Squiggly Slider Page', onTap: SquigglySliderPage()),
-                Button(title: 'Visual Effect Page', onTap: VisualEffectPage()),
-              ],
+        Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(title: Text('Route Page'), backgroundColor: Colors.transparent,),
+          body: Center(
+            child: GlassmorphicContainer(
+             width: queryData.size.width*0.95,
+              height: queryData.size.height*0.92,
+             borderRadius: 20,
+             blur: 7,
+             alignment: Alignment.bottomCenter,
+             border: 1,
+             linearGradient: LinearGradient(
+                 begin: Alignment.topLeft,
+                 end: Alignment.bottomRight,
+                 colors: [
+                   Color(0xFFffffff).withOpacity(0.1),
+                   Color(0xFFFFFFFF).withOpacity(0.05),
+                 ],
+                 stops: [
+                   0.1,
+                   1,
+                 ]),
+             borderGradient: LinearGradient(
+               begin: Alignment.topLeft,
+               end: Alignment.bottomRight,
+               colors: [
+                 Color(0xFFffffff).withOpacity(0.5),
+                 Color((0xFFFFFFFF)).withOpacity(0.5),
+               ],
+             ),
+             child: Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,          
+                  children: [
+                    Button(title: 'Country Picker Page', onTap: CountryPickerPage()),
+                    Button(title: 'Date Picker page', onTap: DatePickerPage()),
+                    Button(title: 'Phone number Formatter Page', onTap: PhoneNumberFormatterPage()),  
+                    Button(title: 'Carousel Slider Page', onTap: CarouselSliderPage()),
+                    Button(title: 'Photo View Page', onTap: SmootPageIndicatorPage()),
+                    Button(title: 'Expandable Page', onTap: ExpandablePage()),
+                    Button(title: 'Swiper Page', onTap: SwiperPage()),
+                    Button(title: 'Sliding Up Page', onTap: SlidingUpPage()),
+                    Button(title: 'Sticky Headers Page', onTap: StickyHeadersPage()),
+                    Button(title: 'Button Tabbar Page', onTap: ButtonTabbarPage()),
+                    Button(title: 'Flip Card Page', onTap: FlipCardPage()),
+                    Button(title: 'Expandable Page View Page', onTap: ExpandablePageViewPage()),
+                    Button(title: 'Awesome Snackbar Content Page', onTap: AwesomeSnackbarContentPage()),
+                    Button(title: 'Quick Alert Page', onTap: QuickAlertPage()),
+                    Button(title: 'Multi Dropdown Page', onTap: MultiDropdownPage()),
+                    Button(title: 'Intro Slider Page', onTap: IntroSliderPage()),
+                    Button(title: 'Salomon Bottom Bar Page', onTap: SalomonBottomBarPage()),
+                    Button(title: 'Flutter WebView Plugin Page', onTap: FlutterWebViewPluginPage()),
+                    Button(title: 'Shake Page', onTap: ShakePage()),
+                    Button(title: 'Expansion Tile Card Page', onTap: ExpansionTileCardPage()),
+                    Button(title: 'Liquid Pull To Refresh Page', onTap: LiquidPullToRefreshPage()),
+                    Button(title: 'Infinite Carousel Page', onTap: InfiniteCarouselPage()),
+                    Button(title: 'Text Scroll Page', onTap: TextScrollPage()),
+                    Button(title: 'Flutter Expandable Fab Page', onTap: FirstPage()),
+                    Button(title: 'Cart Demo Page', onTap: CartDemoPage()),
+                    Button(title: 'Responsive Grid Page', onTap: ResponsiveGridPage()),
+                    Button(title: 'Flutter Fortune Wheel Page', onTap: FlutterFortuneWheelPage()),
+                    Button(title: 'Flutter Slider Drawer Page', onTap: FlutterSliderDrawerPage()),
+                    Button(title: 'Glassmorphism Page', onTap: GlassmorphismPage()),
+                    Button(title: 'Draggable Home Page', onTap: DraggableHomePage()),
+                    Button(title: 'Card Loading Page', onTap: CardLoadingPage()),
+                    Button(title: 'Draggable Page Demo', onTap: DraggablePageDemo()),
+                    Button(title: 'Show Modal Bottom Sheet Message Page', onTap: ShowModalBottomSheetMessagePage()),
+                    Button(title: 'My Responsive Widget Page', onTap: MyResponsiveWidget()),
+                    Button(title: 'Responsive Grid List Page', onTap: ResponsiveGridListPage()),
+                    Button(title: 'Gauge Indicator Page', onTap: GaugeIndicatorPage()),
+                    Button(title: 'Info Popup Page', onTap: InfoPopupPage()),
+                    Button(title: 'Siri Wave Page', onTap: SiriWavePage()),
+                    Button(title: 'Flutter Tilt Page', onTap: FlutterTiltPage()),
+                    Button(title: 'Pie Menu Page', onTap: PieMenuPage()),
+                    Button(title: 'Syncfusion Flutter Sliders Page', onTap: SyncfusionFlutterSlidersPage()),
+                    Button(title: 'Mesh Gradient Page', onTap: MeshGradientPage()),
+                    Button(title: 'Metronome Page', onTap: MetronomePage()),
+                    Button(title: 'Squiggly Slider Page', onTap: SquigglySliderPage()),
+                    Button(title: 'Visual Effect Page', onTap: VisualEffectPage()),
+                    Button(title: 'Draggable Home Page Demo Page', onTap: DraggableHomePageDemoPage()),
+                    Button(title: 'Web Page Demo Page', onTap: WebPageDemoPage()),
+                    Button(title: 'Design Test Page', onTap: DesignTestPage()),
+                  ],
+                ),
+              ),
+             ),
             ),
           ),
         ),
-      ),
+      ],
     );
   }
 }
@@ -144,9 +184,21 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ElevatedButton(onPressed: () async {
-          Navigator.push(context, CupertinoPageRoute(builder: (context) => onTap,));
-        }, child: Text(title, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),)),
+        SizedBox(
+          height: 60,
+          width: double.infinity,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Colors.white.withOpacity(0.2)),
+                elevation:  WidgetStatePropertyAll(0) ,
+              ),
+              onPressed: () async {
+              Navigator.push(context, CupertinoPageRoute(builder: (context) => onTap,));
+            }, child: Text(title, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 161, 11, 24)),)),
+          ),
+        ),
         SizedBox(height: 10,)
       ],
     );

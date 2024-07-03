@@ -13,8 +13,19 @@ class FlutterFortuneWheelPage extends StatefulWidget {
 
 class _FlutterFortuneWheelPageState extends State<FlutterFortuneWheelPage> {
   StreamController<int> controller = StreamController<int>();
+  StreamController<int> selected = StreamController<int>();
+  @override
+  void dispose() {
+    selected.close();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
+    final items = <String>[
+      'Obi-Wan Kenobi',
+      'Grogu',
+      'Mace Windu',
+    ];
     return Scaffold(
       appBar: AppBar(
           title: const Text(
@@ -22,15 +33,29 @@ class _FlutterFortuneWheelPageState extends State<FlutterFortuneWheelPage> {
           ),
           backgroundColor: Colors.lightBlueAccent,
         ),
-        body: FortuneWheel(
-          rotationCount: 1,
-        selected: controller.stream,
-        items: [
-          FortuneItem(child: Text('Han Solo')),
-          FortuneItem(child: Text('Yoda')),
-          FortuneItem(child: Text('Obi-Wan Kenobi')),
-        ],
+        body: GestureDetector(
+        onTap: () {
+          setState(() {
+            selected.add(
+              Fortune.randomInt(1, items.length),
+            );
+          });
+        },
+        child: Column(
+          children: [
+            Expanded(
+              child: FortuneWheel(
+                selected: selected.stream,
+                items: [
+                  for (var it in items) FortuneItem(child: Text(it)),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
+
+
     );
   }
 }

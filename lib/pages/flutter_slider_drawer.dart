@@ -25,6 +25,7 @@ class _FlutterSliderDrawerPageState extends State<FlutterSliderDrawerPage> {
       theme: ThemeData(fontFamily: 'BalsamiqSans'),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        appBar: AppBar(centerTitle: true, title: Text('Flutter Slider Drawer Page'), leading: IconButton(onPressed: () => Navigator.pop(context), icon: Icon(Icons.arrow_back_sharp)),),
         body: SliderDrawer(
             appBar: SliderAppBar(
                 appBarColor: Colors.white,

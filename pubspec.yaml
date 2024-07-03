@@ -96,6 +96,8 @@ dependencies:
   metronome: ^1.1.4
   squiggly_slider: ^1.0.5
   visual_effect: ^0.0.5
+  webview_flutter: ^4.8.0
+  google_fonts: ^6.2.1
   
 
 flutter_native_splash:
@@ -136,6 +138,7 @@ flutter:
   assets:
     - assets/Icon-512.png
     - assets/logo.jpg
+    - assets/progress.gif
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
