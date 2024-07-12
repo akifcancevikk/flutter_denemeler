@@ -8,10 +8,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, // transparent status bar
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+    statusBarBrightness: Brightness.dark,
     statusBarIconBrightness: Brightness.dark,
-    statusBarBrightness: Brightness.dark
+    statusBarColor: Colors.transparent,
   ));
   await Future.delayed(Duration(seconds: 2));
   FlutterNativeSplash.remove();
@@ -27,9 +28,16 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       theme: ThemeData(
-        textTheme: GoogleFonts.outfitTextTheme(textTheme).copyWith(),
+        scrollbarTheme: ScrollbarThemeData(
+          thumbColor: WidgetStatePropertyAll(Colors.red),
+        ),
+        textTheme: GoogleFonts.glassAntiquaTextTheme(textTheme).copyWith(),
         useMaterial3: false,
         appBarTheme: AppBarTheme(
+          iconTheme: IconThemeData(color: Color.fromARGB(255, 161, 11, 24)),
+          titleTextStyle: GoogleFonts.glassAntiqua(
+    textStyle: TextStyle(color: Color.fromARGB(255, 161, 11, 24), fontSize: 30, fontWeight: FontWeight.bold),
+  ),
           backgroundColor: Colors.transparent,
           elevation: 0,
           centerTitle: true

@@ -34,6 +34,7 @@ class _DesignTestPageState extends State<DesignTestPage> {
                             width: ScreenHelper.screenWidthPercentage(context, 99),
                             child: Image.network('https://images.pexels.com/photos/1670187/pexels-photo-1670187.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', fit: BoxFit.cover,))),
                         Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(30.0),
@@ -54,78 +55,81 @@ class _DesignTestPageState extends State<DesignTestPage> {
                                 ],
                               ),
                             ),
-                            GlassmorphicContainer(
-                              width: ScreenHelper.screenHeightPercentage(context, 35),
-                              height: 100,
-                              borderRadius: 20,
-                              blur: 7,
-                              alignment: Alignment.bottomCenter,
-                              border: 1,
-                              linearGradient: LinearGradient(
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 50),
+                              child: GlassmorphicContainer(
+                                width: ScreenHelper.screenHeightPercentage(context, 35),
+                                height: 100,
+                                borderRadius: 20,
+                                blur: 7,
+                                alignment: Alignment.bottomCenter,
+                                border: 1,
+                                linearGradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      Color(0xFFffffff).withOpacity(0.1),
+                                      Color(0xFFFFFFFF).withOpacity(0.05),
+                                    ],
+                                    stops: [
+                                      0.1,
+                                      1,
+                                    ]),
+                                borderGradient: LinearGradient(
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                   colors: [
-                                    Color(0xFFffffff).withOpacity(0.1),
-                                    Color(0xFFFFFFFF).withOpacity(0.05),
-                                  ],
-                                  stops: [
-                                    0.1,
-                                    1,
-                                  ]),
-                              borderGradient: LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                colors: [
-                                  Color(0xFFffffff).withOpacity(0.5),
-                                  Color((0xFFFFFFFF)).withOpacity(0.5),
-                                ],
-                              ),
-                              child: Center(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      flex: 3 ,
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text("Andes Mountain", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Row(
-                                            children: [
-                                              Icon(Icons.map, color: Colors.white,),
-                                              SizedBox(width: 7,),
-                                              Text("South America", style: TextStyle(color: Colors.white),),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                   ),
-                                    Expanded(
-                                      flex: 1 ,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text("Price", style: TextStyle(color: Colors.white, fontSize: 15),),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(6.0),
-                                          child: Text("230", style: TextStyle(color: Colors.white, fontSize: 25)),
-                                        ),
-                                      ],
-                                    )
-                                   ),
+                                    Color(0xFFffffff).withOpacity(0.5),
+                                    Color((0xFFFFFFFF)).withOpacity(0.5),
                                   ],
                                 ),
-                              )
-                                                      ),
+                                child: Center(
+                                  child: Row(
+                                    children: [
+                                      Expanded(
+                                        flex: 3 ,
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text("Andes Mountain", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Row(
+                                              children: [
+                                                Icon(Icons.map, color: Colors.white,),
+                                                SizedBox(width: 7,),
+                                                Text("South America", style: TextStyle(color: Colors.white),),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                     ),
+                                      Expanded(
+                                        flex: 1 ,
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text("Price", style: TextStyle(color: Colors.white, fontSize: 15),),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.all(6.0),
+                                            child: Text("230", style: TextStyle(color: Colors.white, fontSize: 25)),
+                                          ),
+                                        ],
+                                      )
+                                     ),
+                                    ],
+                                  ),
+                                )
+                                                        ),
+                            ),
                          ],
                         ),   
                       ],

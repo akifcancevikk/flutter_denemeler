@@ -15,7 +15,6 @@ class _InfoPopupPageState extends State<InfoPopupPage> {
   @override
   Widget build(BuildContext context) {
 const String infoPopupTextExampleText = 'This is a popup';
-const String infoPopupCustomExampleText = 'This is a custom widget';
 const String infoPopupLongTextExampleText = '''
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Consectetur adipiscing elit ut aliquam purus sit. Nisl vel pretium lectus quam. Et odio pellentesque diam volutpat commodo. Diam vulputate ut pharetra sit amet aliquam id diam maecenas. Malesuada fames ac turpis egestas. Et sollicitudin ac orci phasellus egestas tellus rutrum. Pretium lectus quam id leo in. Semper risus in hendrerit gravida. Nullam ac tortor vitae purus faucibus ornare suspendisse sed. Non tellus orci ac auctor. Quis risus sed vulputate odio ut enim blandit.
 \n
@@ -48,31 +47,15 @@ const String infoPopupArrowGapExampleText = infoPopupLongTextExampleText;
               customContent: () => Container(
                 width: context.screenWidth * .8,
                 decoration: BoxDecoration(
-                  color: Colors.blueGrey,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 padding: const EdgeInsets.all(10),
-                child: const Column(
-                  children: <Widget>[
-                    TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Enter your name',
-                        hintStyle: TextStyle(color: Colors.white),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Center(
-                      child: Text(
-                        infoPopupCustomExampleText,
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Enter your name',
+                    hintStyle: TextStyle(color: Colors.black),
+                  ),
                 ),
               ),
               child: const Text('Info Popup Custom Widget Example'),

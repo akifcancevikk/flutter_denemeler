@@ -98,7 +98,14 @@ dependencies:
   visual_effect: ^0.0.5
   webview_flutter: ^4.8.0
   google_fonts: ^6.2.1
-  
+  shimmer: ^3.0.0
+  percent_indicator: ^4.2.3
+  slide_countdown: ^1.6.1
+  syncfusion_flutter_pdf: ^26.1.41
+  path_provider: ^2.1.3
+  open_file: ^3.3.2
+  pdf: ^3.11.0
+  flutter_pdfview: ^1.3.2
 
 flutter_native_splash:
   android: true
@@ -150,10 +157,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Ariel
+      fonts:
+        - asset: assets/fonts/arial.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

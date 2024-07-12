@@ -21,10 +21,9 @@ class _CountryPickerPageState extends State<CountryPickerPage> {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: const Text(
+          title:  Text(
             'Country Picker',
           ),
-          backgroundColor: Colors.lightBlueAccent,
         ),
         body: Center(
          child: Column(

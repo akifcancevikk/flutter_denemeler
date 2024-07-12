@@ -22,7 +22,14 @@ class _FlipCardPageState extends State<FlipCardPage> {
       margin: EdgeInsets.only(left: 32.0, right: 32.0, top: 20.0, bottom: 0.0),
       color: Color(0x00000000),
       child: FlipCard(
-        direction: FlipDirection.HORIZONTAL,
+        onFlip: () {
+          showDialog(context: context, builder: (context) {
+            return AlertDialog(
+              title: Text('Döndürüldü'),
+            );
+          },);
+        },
+        direction: FlipDirection.VERTICAL,
         side: CardSide.FRONT,
         speed: 1000,
         onFlipDone: (status) {
@@ -57,7 +64,7 @@ class _FlipCardPageState extends State<FlipCardPage> {
         ),
       ),
     ),
-          width: 200,
+          width: 300,
           height: 400,
         ),
 

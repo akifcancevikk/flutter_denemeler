@@ -18,9 +18,10 @@ class _CarouselSliderPageState extends State<CarouselSliderPage> {
       body: Center(
         child: CarouselSlider(
            options: CarouselOptions(
+            pauseAutoPlayInFiniteScroll: true,
             height: 400,
             aspectRatio: 16/9,
-            viewportFraction: 0.8,
+            viewportFraction: 0.6,
             initialPage: 0,
             enableInfiniteScroll: true,
             reverse: false,
@@ -29,7 +30,7 @@ class _CarouselSliderPageState extends State<CarouselSliderPage> {
             autoPlayAnimationDuration: Duration(milliseconds: 800),
             autoPlayCurve: Curves.fastOutSlowIn,
             enlargeCenterPage: true,
-            enlargeFactor: 0.3,
+            enlargeFactor: 0.6,
             onPageChanged: (index, reason) {},
             scrollDirection: Axis.horizontal,
              ),
@@ -41,13 +42,16 @@ class _CarouselSliderPageState extends State<CarouselSliderPage> {
             ].map((i) {
             return Builder(
               builder: (BuildContext context) {
-                return Container(
-                  width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.symmetric(horizontal: 5.0),
-                  decoration: BoxDecoration(
-                    color: Colors.transparent
+                return ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    decoration: BoxDecoration(
+                      color: Colors.transparent
+                    ),
+                    child: Image(image: NetworkImage(i), fit: BoxFit.cover,)
                   ),
-                  child: Image(image: NetworkImage(i), fit: BoxFit.cover,)
                 );
               },
             );
