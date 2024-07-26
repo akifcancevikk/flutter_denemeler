@@ -3,6 +3,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_denemeler/pages/animations_page.dart';
 import 'package:flutter_denemeler/pages/awesome_snackbar_content_page.dart';
 import 'package:flutter_denemeler/pages/buton_tabbar_page.dart';
 import 'package:flutter_denemeler/pages/card_loading.dart';
@@ -18,7 +19,10 @@ import 'package:flutter_denemeler/pages/expandable_page.dart';
 import 'package:flutter_denemeler/pages/expandable_page_view_page.dart';
 import 'package:flutter_denemeler/pages/expansion_tile_card_page.dart';
 import 'package:flutter_denemeler/pages/filter_list_page.dart';
+import 'package:flutter_denemeler/pages/fl_chart_page.dart';
 import 'package:flutter_denemeler/pages/flip_card_page.dart';
+import 'package:flutter_denemeler/pages/flutter_slidable_page.dart';
+import 'package:flutter_denemeler/pages/mail_page.dart';
 import 'package:flutter_denemeler/pages/mesh_gradient.dart';
 import 'package:flutter_denemeler/pages/metronome.dart';
 import 'package:flutter_denemeler/pages/pdf_generator.dart';
@@ -170,6 +174,9 @@ class _RoutePageState extends State<RoutePage> {
                             Button(title: 'Shimmer Page', onTap: ShimmerPage()),
                             Button(title: 'Percent Indicator Page', onTap: PercentIndicatorPage()),
                             Button(title: 'Slide Count Down Page', onTap: SlideCountDownPage()),
+                            Button(title: 'FL Chart Page', onTap: FlChartPage()),
+                            Button(title: 'Animations Page', onTap: AnimationsPage()),
+                            Button(title: 'Flutter Slidable Page', onTap: FlutterSlidablePage()),
                           ],
                         ),
                         Column(
@@ -189,6 +196,7 @@ class _RoutePageState extends State<RoutePage> {
                             Button(title: 'Design Test Page', onTap: DesignTestPage()),
                             Button(title: 'Filter List Page', onTap: FilterListPage()),
                             Button(title: 'Pdf Generator Page', onTap: PdfGeneratorPage()),
+                            Button(title: 'Mail Page', onTap: MailPage()),
                           ],
                         ),
                       ],
@@ -230,7 +238,7 @@ class Button extends StatelessWidget {
               ),
               onPressed: () async {
               Navigator.push(context, CupertinoPageRoute(builder: (context) => onTap,));
-            }, child: Text(title, style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 161, 11, 24)),)),
+            }, child: Text(title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color.fromARGB(255, 161, 11, 24)),)),
           ),
         ),
         SizedBox(height: 10,)
