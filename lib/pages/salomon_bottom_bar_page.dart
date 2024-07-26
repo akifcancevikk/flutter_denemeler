@@ -40,10 +40,10 @@ class _SalomonBottomBarPageState extends State<SalomonBottomBarPage> {
         : _currentIndex == 3
         ? Container(color: Colors.lime, child: Center(child: Text('Adresler', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white)),))
         : Container(color: Colors.red, child: Center(child: Text('Sayfa Bulunamadı', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white)),),)
-      )
-     )
-    ],
-   ),
+          )
+         )
+        ],
+     ),
       bottomNavigationBar: SalomonBottomBar(
         backgroundColor: Colors.white,
           currentIndex: _currentIndex,
