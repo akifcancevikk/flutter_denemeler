@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_denemeler/images.dart';
+import 'package:flutter_denemeler/methods/images.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 class FlutterTiltPage extends StatefulWidget {

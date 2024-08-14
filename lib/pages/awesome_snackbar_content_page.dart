@@ -20,7 +20,10 @@ class _AwesomeSnackbarContentPageState extends State<AwesomeSnackbarContentPage>
           mainAxisSize: MainAxisSize.min,
           children: [
             ElevatedButton(
-              child: const Text('Show Awesome SnackBar'),
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Colors.red)
+              ),
+              child: const Text('Hata Mesajı', style: TextStyle(fontSize: 20),),
               onPressed: () {
                 final snackBar = SnackBar(
                   duration: Duration(seconds: 4),
@@ -28,9 +31,9 @@ class _AwesomeSnackbarContentPageState extends State<AwesomeSnackbarContentPage>
                   behavior: SnackBarBehavior.floating,
                   backgroundColor: Colors.transparent,
                   content: AwesomeSnackbarContent(
-                    title: 'On Snap!',
+                    title: 'Hata Oluştu!',
                     message:
-                        'This is an example error message that will be shown in the body of snackbar!',
+                        'Oluşan hata konusunda yazılması gerekenler!!!',
                     contentType: ContentType.failure,
                   ),
                 );
@@ -40,8 +43,77 @@ class _AwesomeSnackbarContentPageState extends State<AwesomeSnackbarContentPage>
                   ..showSnackBar(snackBar);
               },
             ),
-            const SizedBox(height: 10),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Colors.green)
+              ),
+              child: const Text('Başarılı Mesajı', style: TextStyle(fontSize: 20),),
+              onPressed: () {
+                final snackBar = SnackBar(
+                  duration: Duration(seconds: 4),
+                  elevation: 0,
+                  behavior: SnackBarBehavior.fixed,
+                  backgroundColor: Colors.transparent,
+                  content: AwesomeSnackbarContent(
+                    title: 'Başarılı!',
+                    message:
+                        'Başarılı bir eylem sonrası yazılması gerekenler!!!',
+                    contentType: ContentType.success,
+                  ),
+                );
 
+                ScaffoldMessenger.of(context)
+                  ..hideCurrentSnackBar()
+                  ..showSnackBar(snackBar);
+              },
+            ),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Colors.yellow.shade700)),
+              child: const Text('Uyarı Mesajı', style: TextStyle(fontSize: 20),),
+              onPressed: () {
+                final snackBar = SnackBar(
+                  duration: Duration(seconds: 4),
+                  elevation: 0,
+                  behavior: SnackBarBehavior.floating,
+                  backgroundColor: Colors.transparent,
+                  content: AwesomeSnackbarContent(
+                    title: 'Uyarı!',
+                    message:
+                        'Uyarı alınması durumunda yazılması gerekenler!!!',
+                    contentType: ContentType.warning,
+                  ),
+                );
+
+                ScaffoldMessenger.of(context)
+                  ..hideCurrentSnackBar()
+                  ..showSnackBar(snackBar);
+              },
+            ),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Colors.blue)
+              ),
+              child: const Text('Yardım Mesajı', style: TextStyle(fontSize: 20),),
+              onPressed: () {
+                final snackBar = SnackBar(
+                  duration: Duration(seconds: 4),
+                  elevation: 0,
+                  behavior: SnackBarBehavior.floating,
+                  backgroundColor: Colors.transparent,
+                  content: AwesomeSnackbarContent(
+                    title: 'Uyarı!',
+                    message:
+                        'Yardım alınması durumunda yazılması gerekenler!!!',
+                    contentType: ContentType.help,
+                  ),
+                );
+
+                ScaffoldMessenger.of(context)
+                  ..hideCurrentSnackBar()
+                  ..showSnackBar(snackBar);
+              },
+            ),
           ],
         ),
       ),

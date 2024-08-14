@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter_denemeler/images.dart';
+import 'package:flutter_denemeler/methods/images.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
 class StickyHeadersPage extends StatefulWidget {

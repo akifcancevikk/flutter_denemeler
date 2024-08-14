@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_denemeler/methods/push_notificaation_service.dart';
 import 'package:flutter_denemeler/pages/route.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,6 +19,8 @@ class MyHttpOverrides extends HttpOverrides {
 }
 
 Future<void> main() async {
+   WidgetsFlutterBinding.ensureInitialized();
+ // await NotificationHelper.initialize();
   HttpOverrides.global = MyHttpOverrides();
   await dotenv.load(fileName: ".env");
 

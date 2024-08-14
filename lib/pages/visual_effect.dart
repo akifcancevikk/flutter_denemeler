@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unused_element
 
 import 'package:flutter/material.dart';
-import 'package:flutter_denemeler/images.dart';
+import 'package:flutter_denemeler/methods/images.dart';
 import 'package:visual_effect/visual_effect.dart';
 
 class VisualEffectPage extends StatefulWidget {
