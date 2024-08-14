@@ -2,7 +2,7 @@
 
 import 'dart:io';
 
-import 'package:flutter_denemeler/save_and_open_pdf.dart';
+import 'package:flutter_denemeler/methods/save_and_open_pdf.dart';
 import 'package:pdf/widgets.dart';
 
 class SimplePdfApi{

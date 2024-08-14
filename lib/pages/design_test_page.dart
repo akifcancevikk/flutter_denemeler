@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:flutter_denemeler/height_and_width.dart';
+import 'package:flutter_denemeler/methods/height_and_width.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
 class DesignTestPage extends StatefulWidget {

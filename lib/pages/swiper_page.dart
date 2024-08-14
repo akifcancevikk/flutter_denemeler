@@ -2,7 +2,7 @@
 
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_denemeler/images.dart';
+import 'package:flutter_denemeler/methods/images.dart';
 
 class SwiperPage extends StatefulWidget {
   const SwiperPage({super.key});

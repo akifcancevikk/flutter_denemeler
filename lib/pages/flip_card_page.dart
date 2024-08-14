@@ -36,14 +36,14 @@ class _FlipCardPageState extends State<FlipCardPage> {
         },
         front: Container(
           decoration: BoxDecoration(
-            color: Color(0xFF006666),
+            color: Colors.pink,
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Front', style: Theme.of(context).textTheme.displayLarge),
-              Text('Click here to flip back',
+              Text('Ön Yüz', style: Theme.of(context).textTheme.displayLarge),
+              Text('Döndürmek için Tıklayın',
                   style: Theme.of(context).textTheme.bodyLarge),
             ],
           ),
@@ -56,8 +56,8 @@ class _FlipCardPageState extends State<FlipCardPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Back', style: Theme.of(context).textTheme.displayLarge),
-              Text('Click here to flip front',
+              Text('Arka Yüz', style: Theme.of(context).textTheme.displayLarge),
+              Text('Döndürmek için Tıklayın',
                   style: Theme.of(context).textTheme.bodyLarge),
             ],
           ),

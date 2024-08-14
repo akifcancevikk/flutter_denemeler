@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_denemeler/mail.dart';
+import 'package:flutter_denemeler/methods/mail.dart';
 
 
 class MailPage extends StatefulWidget {

@@ -21,7 +21,10 @@ import 'package:flutter_denemeler/pages/expansion_tile_card_page.dart';
 import 'package:flutter_denemeler/pages/filter_list_page.dart';
 import 'package:flutter_denemeler/pages/fl_chart_page.dart';
 import 'package:flutter_denemeler/pages/flip_card_page.dart';
+import 'package:flutter_denemeler/pages/flutter_map_using.dart';
 import 'package:flutter_denemeler/pages/flutter_slidable_page.dart';
+import 'package:flutter_denemeler/pages/infpopup_deneme_page.dart';
+import 'package:flutter_denemeler/pages/location_finder_page.dart';
 import 'package:flutter_denemeler/pages/mail_page.dart';
 import 'package:flutter_denemeler/pages/mesh_gradient.dart';
 import 'package:flutter_denemeler/pages/metronome.dart';
@@ -42,10 +45,14 @@ import 'package:flutter_denemeler/pages/liquid_pull_to_refresh_page.dart';
 import 'package:flutter_denemeler/pages/multi_dropdown_page.dart';
 import 'package:flutter_denemeler/pages/phone_number_formatter.dart';
 import 'package:flutter_denemeler/pages/quickalert.dart';
+import 'package:flutter_denemeler/pages/report_detail_page.dart';
 import 'package:flutter_denemeler/pages/responsive_grid.dart';
 import 'package:flutter_denemeler/pages/responsive_grid_list_page.dart';
 import 'package:flutter_denemeler/pages/responsive_test_page.dart';
 import 'package:flutter_denemeler/pages/salomon_bottom_bar_page.dart';
+import 'package:flutter_denemeler/pages/scroll_demo_page.dart';
+import 'package:flutter_denemeler/pages/scroll_to_top_page.dart';
+import 'package:flutter_denemeler/pages/search_listview.dart';
 import 'package:flutter_denemeler/pages/shake_page.dart';
 import 'package:flutter_denemeler/pages/shimmer.dart';
 import 'package:flutter_denemeler/pages/shomodal_bottom_sheet_message.dart';
@@ -197,6 +204,13 @@ class _RoutePageState extends State<RoutePage> {
                             Button(title: 'Filter List Page', onTap: FilterListPage()),
                             Button(title: 'Pdf Generator Page', onTap: PdfGeneratorPage()),
                             Button(title: 'Mail Page', onTap: MailPage()),
+                            Button(title: 'Search Listview Page', onTap: SearchListviewPage()),
+                            Button(title: 'Report Detail Page', onTap: ReportDetailPage()),
+                            Button(title: 'Scrol lDemo Page', onTap: ScrollDemoPage()),
+                            Button(title: 'Scroll To Top Page', onTap: ScrollToTopPage()),
+                            Button(title: 'Info Popup Deneme Page', onTap: InfoPopupDenemePage()),
+                            Button(title: 'Location Finder Page', onTap: LocationFinderPage()),
+                            Button(title: 'Flutter Map Using', onTap: FlutterMapUsing()),
                           ],
                         ),
                       ],
